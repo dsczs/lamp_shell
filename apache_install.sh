@@ -20,6 +20,7 @@ cd ${aprutil:0:14}
 ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr && make && make install
 
 #Installing pcre
+yum -y install pcre pcre-devel
 rm -rf /usr/local/pcre
 cd /home/soft/lamp_linux
 pcre='ls | grep pcre*.zip'
