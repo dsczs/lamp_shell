@@ -42,7 +42,7 @@ cd ${http:0:12}
 ./configure --prefix=/usr/local/apache --sysconfdir=/etc/httpd24 --enable-so --enable-ssl --enable-cgi --enable-rewrite --with-zlib --with-pcre=/usr/local/pcre/ --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util/ --enable-modules=most --enable-mpms-shared=all --with-mpm=event && make && make install
 echo "PidFile  \"/var/run/httpd.pid\"" >> /etc/httpd24/httpd.conf
 rm -rf /etc/rc.d/init.d/httpd
-cp httpd.sh /etc/rc.d/init.d/httpd
+cp /home/scripts/httpd.sh /etc/rc.d/init.d/httpd
 chmod +x /etc/rc.d/init.d/httpd
 cd /etc/httpd24
 sed -i "s/Listen 80/Listen 81/g" httpd.conf
