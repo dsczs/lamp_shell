@@ -23,7 +23,7 @@ cd ${aprutil:0:14}
 yum -y install pcre pcre-devel
 rm -rf /usr/local/pcre
 cd /home/soft/lamp_linux
-pcre='ls | grep pcre*.zip'
+pcre=`ls | grep pcre*.zip`
 rm -rf ${pcre:0:9}
 unzip $pcre
 cd ${pcre:0:9}
