@@ -17,7 +17,7 @@ aprutil=`ls | grep apr-util*.tar.gz`
 rm -rf ${aprutil:0:14}
 tar xf $aprutil
 cd ${aprutil:0:14}
-./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr1 && make && make install
+./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr && make && make install
 
 #Installing pcre
 rm -rf /usr/local/pcre
