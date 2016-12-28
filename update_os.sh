@@ -1,3 +1,3 @@
 #!/bin/bash
-yum update
+yum -y update
 yum -y groupinstall 'Development tools,Desktop Platform Development'
