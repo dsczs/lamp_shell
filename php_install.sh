@@ -59,10 +59,11 @@ sed -i "s/;date.timezone =/date.timezone = PRC/g" /etc/php.ini
 
 cp /usr/local/php/etc/php-fpm.conf.default  /usr/local/php/etc/php-fpm.conf
 rm -rf /etc/php.d/*
-sed -i "s/;pid = run/php-fpm.pid/pid = run/php-fpm.pid/g" /usr/local/php/etc/php-fpm.conf
+sed -i "s/;pid = run\/php-fpm.pid/pid = run\/php-fpm.pid/g" /usr/local/php/etc/php-fpm.conf
 rm -rf /etc/rc.d/init.d/php-fpm
 cp  /home/scripts/php-fpm.sh /etc/rc.d/init.d/php-fpm
 chmod +x /etc/rc.d/init.d/php-fpm
+
 service php-fpm restart
 
 rm -rf /usr/local/nginx/nginx.conf
