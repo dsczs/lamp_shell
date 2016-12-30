@@ -54,7 +54,7 @@ cd ${php:0:10}
 
 cp php.ini-production /usr/local/php/php.ini
 ln -sv  /usr/local/php/php.ini /etc/php.ini
-sed -i "s/max_execution_time = 30/max_execution_time = 300/g" /etc/php.ini ;date.timezone =
+sed -i "s/max_execution_time = 30/max_execution_time = 300/g" /etc/php.ini 
 sed -i "s/;date.timezone =/date.timezone = PRC/g" /etc/php.ini
 
 cp /usr/local/php/etc/php-fpm.conf.default  /usr/local/php/etc/php-fpm.conf
