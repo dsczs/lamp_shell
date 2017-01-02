@@ -33,7 +33,7 @@ cd ${pcre:0:9}
 ./configure --prefix=/usr/local/pcre && make && make install
 
 #Installing apache
-service httpd stop
+#service httpd stop
 rm -rf /usr/local/apache
 rm -rf /etc/httpd24
 cd /home/soft/lamp_linux
