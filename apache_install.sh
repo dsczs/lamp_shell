@@ -2,6 +2,9 @@
 echo "Installing apache..............";
 
 # Installing apr
+yum -y install vim
+
+# Installing apr
 rm -rf /usr/local/apr
 cd /home/soft/lamp_linux
 apr=`ls | grep apr-1*.tar.gz`
