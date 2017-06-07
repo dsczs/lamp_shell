@@ -27,8 +27,6 @@ cp support-files/mysql.server /etc/rc.d/init.d/mysqld
 chmod +x /etc/rc.d/init.d/mysqld
 yum -y install libaio-devel
 scripts/mysql_install_db --user=mysql
-service mysqld start
+cd /user/local/mysql
 ./bin/mysqladmin -u root password 'hadoop123'
-./bin/mysql -u root -phadoop123 -e "grant all privileges on *.* to 'root'@'%' identified by 'hadoop123' with grant option;";
-./bin/mysql -u root -phadoop123 -e "FLUSH PRIVILEGES;";
-service mysqld restart
+
