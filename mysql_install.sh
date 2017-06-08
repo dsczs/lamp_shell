@@ -27,6 +27,5 @@ cp support-files/mysql.server /etc/rc.d/init.d/mysqld
 chmod +x /etc/rc.d/init.d/mysqld
 yum -y install libaio-devel
 scripts/mysql_install_db --user=mysql
-cd /user/local/mysql
-./bin/mysqladmin -u root password 'hadoop123'
+
 

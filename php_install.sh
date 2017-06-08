@@ -21,6 +21,9 @@ libiconv=`ls | grep libiconv*.tar.gz`
 rm -rf ${libiconv:0:13}
 tar xf $libiconv
 cd ${libiconv:0:13}
+cd srclib
+sed -i -e '/gets is a security/d' ./stdio.in.h
+cd ..
 ./configure --prefix=/usr/local/libiconv && make && make install
 
 
