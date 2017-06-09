@@ -77,5 +77,4 @@ rm -rf /home/php
 mkdir -p /home/php/php_test
 cp /home/scripts/index.php /home/php/php_test
 
-service nginx restart
 
